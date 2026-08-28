@@ -1,6 +1,6 @@
 :root {
-  --institution-blue: #1261a0;
-  --institution-blue-dark: #0b4779;
+  --institution-blue: #6aa07c;
+  --institution-blue-dark: #315f43;
   --ink: #17212b;
   --muted-ink: #58636e;
   --hairline: #d8dde2;
@@ -73,10 +73,11 @@ body {
   text-decoration: none;
 }
 
-.site-header .logo {
-  width: 50px;
-  height: 58px;
+.lab-wordmark {
+  width: clamp(150px, 19vw, 222px);
+  height: auto;
   flex: 0 0 auto;
+  object-fit: contain;
 }
 
 .site-header .title-text {
@@ -98,12 +99,6 @@ body {
   color: var(--muted-ink);
   font-size: 0.95rem;
   font-weight: 400;
-}
-
-.brand-mark {
-  color: var(--institution-blue);
-  font: 700 clamp(1.35rem, 3vw, 2.4rem)/1 var(--heading);
-  letter-spacing: -0.08em;
 }
 
 .nav-row {
@@ -214,7 +209,7 @@ main > section {
 }
 
 .home-hero .eyebrow {
-  color: #b8d9ef;
+  color: #c8e2d1;
 }
 
 .home-hero h1 {
@@ -392,7 +387,7 @@ main > section {
 }
 
 .research-feature .section-label {
-  color: #b8d9ef;
+  color: #c8e2d1;
 }
 
 .research-feature__content p:not(.section-label) {
@@ -528,10 +523,19 @@ main > section {
 .footer-kicker {
   display: block;
   margin-bottom: 8px;
-  color: #8ec1e3;
+  color: #a8cfb5;
   font-size: 0.78rem;
   letter-spacing: 0.11em;
   text-transform: uppercase;
+}
+
+.footer-brand-logo {
+  display: block;
+  width: 128px;
+  height: auto;
+  margin-bottom: 28px;
+  padding: 10px;
+  background: #fff;
 }
 
 .site-footer p {
@@ -656,12 +660,13 @@ main > section {
   .brand-row {
     min-height: 94px;
   }
-  .brand-mark {
-    display: none;
+  .site-header .home {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
   }
-  .site-header .logo {
-    width: 40px;
-    height: 48px;
+  .lab-wordmark {
+    width: 154px;
   }
   .home-hero {
     min-height: 560px;
